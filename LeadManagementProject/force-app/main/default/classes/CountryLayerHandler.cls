@@ -70,6 +70,7 @@ public with sharing class CountryLayerHandler {
                             List<Object> regionalBlocs = (List<Object>) regionalBlocsObj;
                             Map<String, Object> regionalBloc = (Map<String, Object>) regionalBlocs[0];
 
+                            //Regional Blocs assignment should be changed to the Multipicklist
                             country.RegionalBlocs__c = isValidCountryRegionalBloc(regionalBloc.get('acronym').toString()) ? regionalBloc.get('acronym').toString() : null;
                         }
                         countriesToUpdate.add(country);
